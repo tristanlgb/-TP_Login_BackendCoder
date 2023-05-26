@@ -2,7 +2,7 @@ import express from 'express';
 import session from 'express-session';
 import mongoose from 'mongoose';
 import MongoStore from 'connect-mongo';
-import handlebars from 'express-handlebars';
+import exphbs from 'express-handlebars'; // Import as exphbs instead of handlebars
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import viewRouter from './routes/views.router.js';
@@ -31,7 +31,7 @@ app.use(session({
     saveUninitialized: false
 }));
 
-app.engine('handlebars', handlebars());
+app.engine('handlebars', exphbs); // Use exphbs without invoking it as a function
 app.set('views', __dirname + '/views');
 app.set('view engine', 'handlebars');
 
