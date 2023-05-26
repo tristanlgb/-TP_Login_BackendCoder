@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import userModel from './userModel.js'; 
+
 
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://tristanlgb:holass12@cluster0.ttwijc2.mongodb.net/eshop', {
